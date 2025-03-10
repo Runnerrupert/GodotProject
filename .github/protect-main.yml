@@ -1,0 +1,17 @@
+name: Prevent Unauthorized Merges
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  prevent-illegal-merges:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR Source Branch
+        run: |
+          if [[ "${{ github.head_ref }}" != "develop" ]]; then
+            echo "❌ ERROR: Only 'develop' can be merged into 'main'."
+            exit 1
+          fi
