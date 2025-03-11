@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://00x00s0ya7dq"]
+
+[ext_resource type="Script" uid="uid://o6gqes78srlo" path="res://Scripts/TitleScreen.cs" id="1_uebgo"]
+[ext_resource type="Script" uid="uid://cq1nu0iiisflg" path="res://Scripts/GameManager.cs" id="2_vmg2h"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uebgo")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_top = 103.0
+offset_right = 1152.0
+offset_bottom = 207.0
+theme_override_font_sizes/font_size = 120
+text = "Level Up!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Continue" type="Button" parent="."]
+layout_mode = 0
+offset_left = 521.0
+offset_top = 328.0
+offset_right = 627.0
+offset_bottom = 364.0
+disabled = true
+text = "Continue
+"
+
+[node name="NewGame" type="Button" parent="."]
+layout_mode = 0
+offset_left = 521.0
+offset_top = 367.0
+offset_right = 627.0
+offset_bottom = 403.0
+text = "New Game
+"
+
+[node name="LoadGame" type="Button" parent="."]
+layout_mode = 0
+offset_left = 521.0
+offset_top = 406.0
+offset_right = 627.0
+offset_bottom = 442.0
+text = "Load Game
+"
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 0
+offset_left = 521.0
+offset_top = 445.0
+offset_right = 627.0
+offset_bottom = 481.0
+text = "Settings"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 521.0
+offset_top = 484.0
+offset_right = 627.0
+offset_bottom = 520.0
+text = "Quit"
+script = ExtResource("2_vmg2h")
+
+[connection signal="pressed" from="Settings" to="." method="GoToSettings"]
+[connection signal="pressed" from="Quit" to="Quit" method="QuitGame"]
