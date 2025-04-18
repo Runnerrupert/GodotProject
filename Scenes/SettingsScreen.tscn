@@ -1,0 +1,143 @@
+[gd_scene load_steps=9 format=3 uid="uid://e0wqbr7vjjvp"]
+
+[ext_resource type="Script" uid="uid://dbacm34bgfrbl" path="res://Scripts/SettingsScripts/SettingsScreen.cs" id="1_3byia"]
+[ext_resource type="Script" uid="uid://dl6bfaliue1le" path="res://Scripts/SettingsScripts/AudioScript.cs" id="2_pjhuu"]
+[ext_resource type="Script" uid="uid://b0pt0awjc8haf" path="res://Scripts/SettingsScripts/DisplayScript.cs" id="2_rl25b"]
+[ext_resource type="Script" uid="uid://btdhy00t506a8" path="res://Scripts/SettingsScripts/GameplayScript.cs" id="4_6qg0w"]
+[ext_resource type="Script" uid="uid://yjyijqiejwvo" path="res://Scripts/SettingsScripts/ControlsScript.cs" id="5_ir0c1"]
+[ext_resource type="Script" uid="uid://buctrjtly6e8x" path="res://Scripts/SettingsScripts/UIScript.cs" id="6_pk75q"]
+[ext_resource type="Script" uid="uid://c1uhxy755ubdy" path="res://Scripts/SettingsScripts/GraphicsScript.cs" id="7_s3diw"]
+[ext_resource type="Script" uid="uid://b35y0dexa7glc" path="res://Scripts/SettingsScripts/CreditsScript.cs" id="8_1neqb"]
+
+[node name="SettingsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 4.0
+offset_right = 13.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3byia")
+
+[node name="BackButton" type="Button" parent="."]
+top_level = true
+layout_mode = 0
+offset_left = 13.0
+offset_top = 17.0
+offset_right = 99.0
+offset_bottom = 48.0
+text = "Back"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1133.0
+offset_bottom = 638.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="AudioButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Audio
+"
+alignment = 0
+
+[node name="DisplayButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Display
+"
+alignment = 0
+
+[node name="GameplayButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Gameplay
+"
+alignment = 0
+
+[node name="ControlsButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Controls
+"
+alignment = 0
+
+[node name="UIButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "UI
+"
+alignment = 0
+
+[node name="GraphicsButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Graphics
+"
+alignment = 0
+
+[node name="CreditsButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Credits
+"
+alignment = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="AudioPanel" type="Control" parent="HBoxContainer/PanelContainer"]
+layout_mode = 2
+script = ExtResource("2_pjhuu")
+
+[node name="DisplayPanel" type="Control" parent="HBoxContainer/PanelContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("2_rl25b")
+
+[node name="DisplayModeText" type="TextEdit" parent="HBoxContainer/PanelContainer/DisplayPanel"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 179.0
+offset_right = 426.0
+offset_bottom = 214.0
+text = "Display Mode"
+
+[node name="OptionButton_DisplayMode" type="OptionButton" parent="HBoxContainer/PanelContainer/DisplayPanel"]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 181.0
+offset_right = 410.0
+offset_bottom = 212.0
+alignment = 1
+item_count = 2
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Fullscreen"
+popup/item_1/id = 1
+
+[node name="GameplayPanel" type="Control" parent="HBoxContainer/PanelContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("4_6qg0w")
+
+[node name="ControlsPanel" type="Control" parent="HBoxContainer/PanelContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("5_ir0c1")
+
+[node name="UIPanel" type="Control" parent="HBoxContainer/PanelContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("6_pk75q")
+
+[node name="GraphicsPanel" type="Control" parent="HBoxContainer/PanelContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("7_s3diw")
+
+[node name="CreditsPanel" type="Control" parent="HBoxContainer/PanelContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("8_1neqb")
+
+[connection signal="pressed" from="BackButton" to="." method="BackButton"]
