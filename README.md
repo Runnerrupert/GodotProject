@@ -10,11 +10,11 @@ Steps Until 1.0.0 Release:
 Phase 1: 
 
 1. Startup Completion  
-	✅ 0.0.1.1: Phase 1 Version Control Planning Complete
-	✅ 0.0.1.2 : Setup Basic Scene Manager for initial Scene Switches
-	- 0.0.1.3 : Continue, New Game, Load Game, Settings, and Quit options available to player (Non-Functional)
-	- 0.0.1.4 : Settings Menu (Functional)
-	- 0.0.2 : New Game Initialization (Functional)
+	✅ 0.0.1.1: Phase 1 Version Control Planning Complete  
+	✅ 0.0.1.2 : Setup Basic Scene Manager for initial Scene Switches  
+	✅ 0.0.1.3 : Continue, New Game, Load Game, Settings, and Quit options available to player (Non-Functional)  
+	- 0.0.1.4 : Settings Menu (Functional)  
+	- 0.0.2 : New Game Initialization (Functional)  
 
 2. Tutorial   
 	- 0.0.2.1 : Initial Tutorial - Explaining Controls/Inputs (Functional)

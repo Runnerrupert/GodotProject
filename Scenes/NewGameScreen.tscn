@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc7if8waxvpn5"]
+
+[ext_resource type="Script" uid="uid://h85uffwm5dgb" path="res://Scripts/NewGameScreen.cs" id="1_cljje"]
+
+[node name="NewGameScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cljje")
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 41.0
+offset_right = 117.0
+offset_bottom = 72.0
+text = "Back"
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_top = 103.0
+offset_right = 1152.0
+offset_bottom = 207.0
+theme_override_font_sizes/font_size = 120
+text = "New Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot 1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 328.0
+offset_right = 490.0
+offset_bottom = 455.0
+disabled = true
+text = "Slot 1
+"
+
+[node name="Slot 2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 328.0
+offset_right = 627.0
+offset_bottom = 455.0
+disabled = true
+text = "Slot 2
+"
+
+[node name="Slot 3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 328.0
+offset_right = 765.0
+offset_bottom = 455.0
+disabled = true
+text = "Slot 3"
+
+[connection signal="pressed" from="BackButton" to="." method="BackButton"]

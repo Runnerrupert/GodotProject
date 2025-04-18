@@ -4,8 +4,9 @@ using System.Collections.Generic;
 
 public enum eSceneNames {
 	TitleScreen = 10,
-	LoadScreen = 20,
-	SettingsScreen = 30
+	LoadGameScreen = 20,
+	NewGameScreen = 30,
+	SettingsScreen = 40
 }
 
 public partial class SceneManager : Node {
@@ -14,7 +15,8 @@ public partial class SceneManager : Node {
 
 	public Dictionary<eSceneNames, SceneData> sceneDictionary = new Dictionary<eSceneNames, SceneData>() {
 		{eSceneNames.TitleScreen, new SceneData ("Title Screen", "res://Scenes/TitleScreen.tscn")},
-		{eSceneNames.LoadScreen, new SceneData ("Load Screen", "res://Scenes/LoadScreen.tscn")},
+		{eSceneNames.LoadGameScreen, new SceneData ("Load Screen", "res://Scenes/LoadGameScreen.tscn")},
+		{eSceneNames.NewGameScreen, new SceneData ("New Game Screen", "res://Scenes/NewGameScreen.tscn")},
 		{eSceneNames.SettingsScreen, new SceneData ("Settings Screen", "res://Scenes/SettingsScreen.tscn")}
 	};
 

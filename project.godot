@@ -11,13 +11,18 @@ config_version=5
 [application]
 
 config/name="LevelUp"
-run/main_scene="uid://e0wqbr7vjjvp"
+run/main_scene="uid://00x00s0ya7dq"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 SceneManager="*res://Scripts/SceneManager.cs"
+GameManager="*res://Scripts/GameManager.cs"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [dotnet]
 
