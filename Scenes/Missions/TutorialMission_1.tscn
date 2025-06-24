@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfhttlmki1wpm"]
+
+[ext_resource type="Script" uid="uid://dwcw24u3njr14" path="res://Scripts/Missions/TutorialMission_1.cs" id="1_h4n74"]
+[ext_resource type="Script" uid="uid://1w2wdm13ss45" path="res://Scripts/Core/CameraControl.cs" id="1_tgpa8"]
+[ext_resource type="Script" uid="uid://btlvubvgh7bcf" path="res://Scripts/Systems/Spawner.cs" id="2_d624r"]
+[ext_resource type="PackedScene" uid="uid://prggdyw0xgrq" path="res://Scenes/UI/SelectionBox.tscn" id="4_bush0"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_bush0"]
+vertices = PackedVector2Array(1366.28, -695.258, 1792.35, -218.031, 1367.52, 805.508, -1285.01, 618.32, -2222.68, -522.242, -798.156, -693.023, 498.906, -747.977)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1804, -220, 1374, 816, -1290, 628, -2242, -530, -799, -703, 499, -758, 1371, -705)])
+
+[node name="TutorialMission_1" type="Node2D"]
+script = ExtResource("1_h4n74")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+script = ExtResource("1_tgpa8")
+
+[node name="Spawner" type="Node" parent="."]
+script = ExtResource("2_d624r")
+
+[node name="SelectionBox" parent="." instance=ExtResource("4_bush0")]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_bush0")

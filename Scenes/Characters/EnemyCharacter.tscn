@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu302110u7kd6"]
+
+[ext_resource type="PackedScene" uid="uid://qoormeeqm2cj" path="res://Scenes/Characters/Character.tscn" id="1_bmctv"]
+[ext_resource type="Script" uid="uid://d2tmcgryi7i77" path="res://Scripts/Characters/EnemyCharacter.cs" id="2_xjtak"]
+
+[node name="EnemyCharacter" instance=ExtResource("1_bmctv")]
+script = ExtResource("2_xjtak")
+CharacterName = "Trash Enemy Unit"
+MaxHealth = 3

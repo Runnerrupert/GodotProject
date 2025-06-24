@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://qoormeeqm2cj"]
+
+[ext_resource type="Script" uid="uid://dj74hhtnlmcf6" path="res://Scripts/Characters/Character.cs" id="1_sy4xu"]
+[ext_resource type="PackedScene" uid="uid://b5qn17aq2kkg5" path="res://Scenes/Characters/Components/VisualComponent.tscn" id="2_6p7dp"]
+
+[node name="Character" type="Node2D"]
+script = ExtResource("1_sy4xu")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="VisualComponent" parent="." instance=ExtResource("2_6p7dp")]

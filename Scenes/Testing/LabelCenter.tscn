@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6383qtiroxam"]
+
+[ext_resource type="Script" uid="uid://8opqpookb0ln" path="res://Scripts/Tests/LabelCenter.cs" id="1_1im3i"]
+[ext_resource type="Texture2D" uid="uid://ctnmmxy1mqxr2" path="res://Assets/Textures/LilGuy.png" id="2_tdfjo"]
+[ext_resource type="Script" uid="uid://1w2wdm13ss45" path="res://Scripts/Core/CameraControl.cs" id="3_re0p0"]
+
+[node name="LabelCenter" type="Node2D"]
+script = ExtResource("1_1im3i")
+
+[node name="TestPlayer" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="TestPlayer"]
+texture = ExtResource("2_tdfjo")
+
+[node name="Panel" type="Panel" parent="TestPlayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="TestPlayer/Panel"]
+layout_mode = 2
+offset_left = 49.0
+offset_right = 50.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("3_re0p0")

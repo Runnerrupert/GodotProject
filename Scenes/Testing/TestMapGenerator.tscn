@@ -1,0 +1,25 @@
+[gd_scene load_steps=8 format=3 uid="uid://lfgxca2d8lu7"]
+
+[ext_resource type="Script" uid="uid://7j72sgrpryi2" path="res://Scripts/Tests/TestMapGenerator.cs" id="1_2r1f4"]
+[ext_resource type="Script" uid="uid://bjjmua7r33625" path="res://Scripts/Systems/RoomGenerator.cs" id="1_76o82"]
+[ext_resource type="PackedScene" uid="uid://6bov7wtrnlw2" path="res://Scenes/Prefab_MapGeneration/Room_Start.tscn" id="2_r7vii"]
+[ext_resource type="PackedScene" uid="uid://b2blqu6i7g0t0" path="res://Scenes/Prefab_MapGeneration/Room_Basic.tscn" id="3_slgsx"]
+[ext_resource type="Script" uid="uid://1w2wdm13ss45" path="res://Scripts/Core/CameraControl.cs" id="4_r7vii"]
+[ext_resource type="Script" uid="uid://btlvubvgh7bcf" path="res://Scripts/Systems/Spawner.cs" id="6_d44ga"]
+[ext_resource type="PackedScene" uid="uid://prggdyw0xgrq" path="res://Scenes/UI/SelectionBox.tscn" id="7_d44ga"]
+
+[node name="TestMapGenerator" type="Node2D"]
+script = ExtResource("1_2r1f4")
+
+[node name="RoomGenerator" type="Node2D" parent="."]
+script = ExtResource("1_76o82")
+StartRoomScene = ExtResource("2_r7vii")
+BasicRoomScene = ExtResource("3_slgsx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("4_r7vii")
+
+[node name="Spawner" type="Node" parent="."]
+script = ExtResource("6_d44ga")
+
+[node name="SelectionBox" parent="." instance=ExtResource("7_d44ga")]
