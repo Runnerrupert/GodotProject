@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dadmb31pehwe4"]
+
+[ext_resource type="Script" uid="uid://cg2q0m2gouwnr" path="res://Scripts/Characters/MainBase.cs" id="1_6cdcu"]
+[ext_resource type="PackedScene" uid="uid://b5qn17aq2kkg5" path="res://Scenes/Characters/Components/VisualComponent.tscn" id="2_kpdvb"]
+
+[node name="MainBase" type="Node2D"]
+script = ExtResource("1_6cdcu")
+
+[node name="VisualComponent" parent="." instance=ExtResource("2_kpdvb")]
